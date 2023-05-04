@@ -59,7 +59,6 @@ class SurveyController {
   ) {
     if (onNextStep != null) {
       onNextStep!(context, resultFunction);
-      return;
     }
     BlocProvider.of<SurveyPresenter>(context).add(
       NextStep(
@@ -74,7 +73,6 @@ class SurveyController {
   }) {
     if (onStepBack != null) {
       onStepBack!(context, resultFunction);
-      return;
     }
     BlocProvider.of<SurveyPresenter>(context).add(
       StepBack(
@@ -89,7 +87,6 @@ class SurveyController {
   }) {
     if (onCloseSurvey != null) {
       onCloseSurvey!(context, resultFunction);
-      return;
     }
     BlocProvider.of<SurveyPresenter>(context).add(
       CloseSurvey(
